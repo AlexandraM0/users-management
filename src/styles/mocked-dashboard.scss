@@ -1,0 +1,89 @@
+@import './global.scss';
+
+.mocked-header {
+    text-align: center;
+    color: $text-color;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.mocked-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mocked-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    background-color: $wh-color;
+    color: $text-color;
+
+    th, td{
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th{
+        background-color: $header-table;
+        color: $text-color;
+        font-weight: bold;
+    }
+
+    td{
+        color: $text-color;
+    }
+
+    tr:hover{
+        background-color: $table-row-hover;
+    }
+
+}
+
+.add-user-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: $wh-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+
+    &:hover {
+        background-color: $primary-hover-color;
+        transition: all 0.3s ease;
+    }
+
+    .icon{
+        color: $wh-color;
+    }
+}
+
+.icon {
+    margin-right: 10px;
+    cursor: pointer;
+    color: $primary-color;
+
+    &:hover{
+    color: $primary-hover-color;
+    transition: all 0.3s ease;
+    }
+}
+
+@media (max-width: 780px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,97 @@
+@import './global.scss';
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container-card {
+  flex: 1 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image-container {
+  img {
+    width: 100%;
+  }
+}
+
+.form-container {
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: $text-color;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: $text-color;
+  }
+
+  input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1.5px solid $text-color;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px;
+    background-color: $primary-color;
+    color: $wh-color;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-hover-color;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.button-text {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 15px;
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 780px) {
+  .image-container {
+    display: none;
+  }
+
+  .form-container {
+    box-shadow: none;
+    max-width: 100%;
+  }
+}
